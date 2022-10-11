@@ -1,0 +1,145 @@
+<div class="row container-fluid" style="height: 100px; background-color:#0b0c2a"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="col-12" style="color: white">
+        <div class="card mb-3" style="width: 100%">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{book.image}}" style="width: 100%; height: 100%"
+                   class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body row">
+                <h5 class="card-title">{{book.name}}</h5>
+                <div class="d-flex align-items-center  mt-2">
+                  <h3 style="color: red">{{book.price - (book.price * book.discount.percent) / 100}}đ</h3>
+                  <h6 class="text-muted ms-2">
+                    <del>{{book.price}}</del>
+                  </h6>
+                </div>
+                <p class="card-text">Author: {{book.author}}</p>
+                <p class="card-text col-6">Translator: <span style="color: rgba(199,99,99,0.97)">{{book.translator}}</span></p>
+                <p class="card-text col-6">Publisher: <span style="color: rgba(199,99,99,0.97)">{{book.publisher}}</span></p>
+                <p class="card-text col-6">Category: <span style="color: rgba(199,99,99,0.97)">{{book.category.name}}</span></p>
+                <p class="card-text col-6">Discount:  <span style="color: rgba(199,99,99,0.97)">{{book.discount.percent}}%</span></p>
+                <p class="card-text col-6">Quantity: <span style="color: rgba(199,99,99,0.97)">{{book.quantity}}</span></p>
+                <p class="card-text col-6">Dimension: <span style="color: rgba(199,99,99,0.97)">{{book.dimension}}</span></p>
+                <p class="card-text col-6">Status: <span style="color: rgba(199,99,99,0.97)">{{book.status}}</span></p>
+                <p class="card-text col-6">Publication year: <span style="color: rgba(199,99,99,0.97)">{{book.releaseDate}}</span></p>
+                <hr>
+                <div class="col-12">
+                  <button class="btn btn-light">Buy Books</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row container-fluid" style="height: 20px; background-color:#0b0c2a"></div>
+      <div class="section-title">
+        <h4>Introduce</h4>
+      </div>
+      <div>
+        <p style="color: white;padding: 2%">{{book.description}}</p>
+      </div>
+      <div class="row container-fluid" style="height: 20px; background-color:#0b0c2a"></div>
+      <div class="section-title">
+        <h4>New Book</h4>
+      </div>
+      <div class="row container-fluid" style="height: 20px; background-color:#0b0c2a"></div>
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-6 title ">
+          <a style="text-decoration: none ; color: white" href="#">
+            <div class="card" style="width: 100%">
+              <img src="../../assets/img/fate-stay-night-2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 style="font-size: 0.6rem" class="card-title">Fate/Stay Night-Tập 1</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 title ">
+          <a style="text-decoration: none ; color: white" href="#">
+            <div class="card" style="width: 100%">
+              <img src="../../assets/img/fate-stay-night-2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 style="font-size: 0.6rem" class="card-title">Fate/Stay Night-Tập 1</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 title ">
+          <a style="text-decoration: none ; color: white" href="#">
+            <div class="card" style="width: 100%">
+              <img src="../../assets/img/fate-stay-night-2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 style="font-size: 0.6rem" class="card-title">Fate/Stay Night-Tập 1</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 title ">
+          <a style="text-decoration: none ; color: white" href="#">
+            <div class="card" style="width: 100%">
+              <img src="../../assets/img/fate-stay-night-2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 style="font-size: 0.6rem" class="card-title">Fate/Stay Night-Tập 1</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 title ">
+          <a style="text-decoration: none ; color: white" href="#">
+            <div class="card" style="width: 100%">
+              <img src="../../assets/img/fate-stay-night-2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 style="font-size: 0.6rem" class="card-title">Fate/Stay Night-Tập 1</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 title ">
+          <a style="text-decoration: none ; color: white" href="#">
+            <div class="card" style="width: 100%">
+              <img src="../../assets/img/fate-stay-night-2.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 style="font-size: 0.6rem" class="card-title">Fate/Stay Night-Tập 1</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="section-title">
+        <h4>TOP SALES</h4>
+      </div>
+      <div class="row container-fluid" style="height: 20px; background-color:#0b0c2a"></div>
+      <div class="row">
+        <div class="col-12 title " *ngFor="let item of bookListSale ">
+          <a [routerLink]="['/detail',item.id]" style="text-decoration: none ; color: white" href="#">
+            <div class="card" style="width: 100%">
+              <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
+                <div >{{item.discount.percent}} %</div>
+              </div>
+              <img src="{{item.image}}" style="width: 100%; height: 180px; object-fit: cover;"
+                   class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">Price : {{item.price}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,42 @@
+.formRow {
+  display: flex;
+  justify-content: center;;
+}
+
+.formRow_create {
+  border-radius: 15px;
+  padding: 15px 15px 15px 15px;
+  box-shadow: 2px 7px 9px 3px #1b191933;
+  background: white;
+  opacity: 85%
+}
+
+body {
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+
+
+.formRow_create_title {
+  text-align: center;
+  background-color: #000040;
+  border-radius: 7px;
+  color: white;
+}
+
+button {
+  margin-bottom: 2%;
+}
+
+label {
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 2vw;
+  padding: 1% 0%;
+}

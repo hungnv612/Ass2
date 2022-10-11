@@ -1,0 +1,111 @@
+<div class="container-fluid" style="background-color: #0b0c2a;">
+  <div class="vc_empty_space" style="height: 110px"><span class="vc_empty_space_inner"></span></div>
+  <div class="container">
+    <div class="row formRow">
+      <form class="col-lg-6 formRow_create" [formGroup]="bookForm" style="background-color: #070720; color: white">
+        <div class="mb-3 formRow_create_title">
+          <h5><b>ADD NEW BOOK</b></h5>
+        </div>
+        <hr>
+        <div class="formRow_create_content">
+
+          <div class="mb-3">
+            <div class="row">
+              <div class="col-md">
+                <label class="form-label">Name Book <span class="text-danger">*</span> </label>
+                <input type="text" class="form-control" formControlName="name">
+              </div>
+              <div class="col-md">
+                <label class="form-label">Code Book <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" formControlName="code">
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col-md">
+                <label class="form-label">Price <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" formControlName="price">
+              </div>
+              <div class="col-md">
+                <label class="form-label">Publisher <span class="text-danger">*</span> </label>
+                <input type="text" class="form-control" formControlName="publisher">
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col-md">
+                <label class="form-label">Quantity <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" formControlName="quantity">
+              </div>
+              <div class="col-md">
+                <label class="form-label">Release Date <span class="text-danger">*</span> </label>
+                <input type="date" class="form-control" formControlName="releaseDate">
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col-md">
+                <label class="form-label">Dimension <span class="text-danger">*</span> </label>
+                <input type="text" class="form-control" formControlName="dimension">
+              </div>
+              <div class="col-md">
+                <label class="form-label">Total Pages <span class="text-danger">*</span> </label>
+                <input type="text" class="form-control" formControlName="totalPages">
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col-md">
+                <label class="form-label">Translator <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" formControlName="translator">
+              </div>
+              <div class="col-md">
+                <label class="form-label">Author <span class="text-danger">*</span> </label>
+                <input type="text" class="form-control" formControlName="author">
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Image Book <span class="text-danger">*</span> </label>
+            <input type="text" class="form-control" formControlName="image">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Description <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" formControlName="description">
+          </div>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col-md">
+                <label class="form-label"> Category <span class="text-danger">*</span></label>
+                <select class="form-control" formControlName="category">
+                  <option value="" disabled>Vui Lòng Chọn</option>
+                  <option  *ngFor="let item of category" [ngValue]="item.id">{{item.name}}</option>
+                </select>
+              </div>
+              <div class="col-md">
+                <label class="form-label">Discount<span class="text-danger">*</span> </label>
+                <select class="form-control" formControlName="discount">
+                  <option value="" disabled>Vui Lòng Chọn</option>
+                  <option  *ngFor="let item of discount" [ngValue]="item.id">{{item.percent}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-around">
+            <button class="btn btn-outline-danger" routerLink=""> Quay Lại</button>
+            <button class="btn btn-outline-success" (click)="submit()"> Thêm Mới</button>
+            <button class="btn btn-outline-secondary"> Nhập Lại</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="vc_empty_space" style="height: 64px"><span class="vc_empty_space_inner"></span></div>
+
+</div>
+
+

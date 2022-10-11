@@ -1,0 +1,371 @@
+<div class="row container-fluid" style="height: 40px; background-color:#0b0c2a"></div>
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade container" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner" style="padding: 3%;">
+    <div class="carousel-item active">
+      <img style="border-radius: 15px;" src="../../assets/img/hero-1.jpg" class="d-block w-100" height="500px"><img>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Fate / Stay Night: Unlimited Blade Works</h3>
+        <p>After 30 days of travel across the world...</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img style="border-radius: 15px;" src="../../assets/img/3416362.png" class="d-block w-100" height="500px"><img>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Virtual Reality Massively Multiplayer Online Playing Game</h3>
+        <p>players log in for the first time and find out they can't log out....</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img style="border-radius: 15px;" src="../../assets/img/hero-1.jpg" class="d-block w-100" height="500px"><img>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Fate / Stay Night: Unlimited Blade Works</h3>
+        <p>After 30 days of travel across the world...</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="col-12">
+        <div class="section-title">
+          <h4>Trending Now</h4>
+        </div>
+      </div>
+      <div class="row container-fluid" style="height: 20px; background-color:#0b0c2a"></div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-1" *ngFor="let item of bookList ">
+          <div class="product-item bg-light mb-4">
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="{{item.image}}" alt="">
+              <div class="product-action">
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-shopping-cart"></i></a>
+                <a [routerLink]="['/detail',item.id]" class="btn btn-light btn-square"><i
+                  class="fa fa-info"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-edit"></i></a>
+                <a class="btn btn-light btn-square"
+                   data-target="#deleteModal"><i class="fa fa-trash"></i></a>
+              </div>
+            </div>
+            <div style="background-color: #070720;color: white" class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">{{item.name | slice: 0: 17}}...</a>
+              <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>{{item.price - (item.price * item.discount.percent) / 100}}đ</h5>
+                <h6 class="text-muted ms-2">
+                  <del>{{item.price}}</del>
+                </h6>
+              </div>
+              <div class="d-flex align-items-center justify-content-center mb-1">
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small>(99)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row container-fluid" style="height: 10px; background-color:#0b0c2a"></div>
+        <div style="text-align: center">
+          <button routerLink="/list" class="btn see_more">Xem Thêm</button>
+        </div>
+      </div>
+
+
+      <div class="row container-fluid" style="height: 10px; background-color:#0b0c2a"></div>
+      <div class="col-12">
+        <div class="section-title">
+          <h4>POPULAR SHOWS</h4>
+        </div>
+      </div>
+      <div class="row container-fluid" style="height: 20px; background-color:#0b0c2a"></div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+          <div class="product-item bg-light mb-4">
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="../../assets/img/fate-stay-night-2.png" alt="">
+              <div class="product-action">
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-shopping-cart"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-info"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-edit"></i></a>
+                <a class="btn btn-light btn-square"
+                   data-target="#deleteModal"><i class="fa fa-trash"></i></a>
+              </div>
+            </div>
+            <div style="background-color: #070720;color: white" class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">Fate/Stay Night-Tập 1</a>
+              <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>55555555đ</h5>
+                <h6 class="text-muted ms-2">
+                  <del>4000000đ</del>
+                </h6>
+              </div>
+              <div class="d-flex align-items-center justify-content-center mb-1">
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small>(99)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+          <div class="product-item bg-light mb-4">
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="../../assets/img/fate-stay-night-2.png" alt="">
+              <div class="product-action">
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-shopping-cart"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-info"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-edit"></i></a>
+                <a class="btn btn-light btn-square"
+                   data-target="#deleteModal"><i class="fa fa-trash"></i></a>
+              </div>
+            </div>
+            <div style="background-color: #070720;color: white" class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">Fate/Stay Night-Tập 1</a>
+              <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>55555555đ</h5>
+                <h6 class="text-muted ms-2">
+                  <del>4000000đ</del>
+                </h6>
+              </div>
+              <div class="d-flex align-items-center justify-content-center mb-1">
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small>(99)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+          <div class="product-item bg-light mb-4">
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="../../assets/img/fate-stay-night-2.png" alt="">
+              <div class="product-action">
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-shopping-cart"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-info"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-edit"></i></a>
+                <a class="btn btn-light btn-square"
+                   data-target="#deleteModal"><i class="fa fa-trash"></i></a>
+              </div>
+            </div>
+            <div style="background-color: #070720;color: white" class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">Fate/Stay Night-Tập 1</a>
+              <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>55555555đ</h5>
+                <h6 class="text-muted ms-2">
+                  <del>4000000đ</del>
+                </h6>
+              </div>
+              <div class="d-flex align-items-center justify-content-center mb-1">
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small>(99)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+          <div class="product-item bg-light mb-4">
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="../../assets/img/fate-stay-night-2.png" alt="">
+              <div class="product-action">
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-shopping-cart"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-info"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-edit"></i></a>
+                <a class="btn btn-light btn-square"
+                   data-target="#deleteModal"><i class="fa fa-trash"></i></a>
+              </div>
+            </div>
+            <div style="background-color: #070720;color: white" class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">Fate/Stay Night-Tập 1</a>
+              <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>55555555đ</h5>
+                <h6 class="text-muted ms-2">
+                  <del>4000000đ</del>
+                </h6>
+              </div>
+              <div class="d-flex align-items-center justify-content-center mb-1">
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small>(99)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+          <div class="product-item bg-light mb-4">
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="../../assets/img/fate-stay-night-2.png" alt="">
+              <div class="product-action">
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-shopping-cart"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-info"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-edit"></i></a>
+                <a class="btn btn-light btn-square"
+                   data-target="#deleteModal"><i class="fa fa-trash"></i></a>
+              </div>
+            </div>
+            <div style="background-color: #070720;color: white" class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">Fate/Stay Night-Tập 1</a>
+              <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>55555555đ</h5>
+                <h6 class="text-muted ms-2">
+                  <del>4000000đ</del>
+                </h6>
+              </div>
+              <div class="d-flex align-items-center justify-content-center mb-1">
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small>(99)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+          <div class="product-item bg-light mb-4">
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" src="../../assets/img/fate-stay-night-2.png" alt="">
+              <div class="product-action">
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-shopping-cart"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-info"></i></a>
+                <a class="btn btn-light btn-square"><i
+                  class="fa fa-edit"></i></a>
+                <a class="btn btn-light btn-square"
+                   data-target="#deleteModal"><i class="fa fa-trash"></i></a>
+              </div>
+            </div>
+            <div style="background-color: #070720;color: white" class="text-center py-4">
+              <a class="h6 text-decoration-none text-truncate" href="">Fate/Stay Night-Tập 1</a>
+              <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>55555555đ</h5>
+                <h6 class="text-muted ms-2">
+                  <del>4000000đ</del>
+                </h6>
+              </div>
+              <div class="d-flex align-items-center justify-content-center mb-1">
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small class="fa fa-star text-primary mr-1"></small>
+                <small>(99)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="section-title">
+        <h4>Top Sales</h4>
+      </div>
+      <div class="row container-fluid" style="height: 20px; background-color:#0b0c2a"></div>
+      <div class="row">
+        <div class="col-12 title " *ngFor="let item of bookListSale ">
+          <a [routerLink]="['/detail',item.id]" style="text-decoration: none ; color: white" href="#">
+            <div class="product-item card" style="width: 100%">
+              <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
+                <div>{{item.discount.percent}} %</div>
+              </div>
+              <div class="card-img-top product-img  overflow-hidden">
+                <img src="{{item.image}}" style="width: 100%; height: 180px; object-fit: cover;"
+                     alt="...">
+              </div>
+
+              <div style="background-color: #070720" class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <div class="d-flex align-items-center  mt-2">
+                  <h5>{{item.price - (item.price * item.discount.percent) / 100}}đ</h5>
+                  <h6 class="text-muted ms-2">
+                    <del>{{item.price}}</del>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <div class="row container-fluid" style="height: 20px; background-color:#0b0c2a"></div>
+      <div class="section-title">
+        <h4>New Book</h4>
+      </div>
+      <div class="row container-fluid" style="height: 20px; background-color:#0b0c2a"></div>
+      <div class="row">
+        <div class="col-12 title" *ngFor="let item of bookListNew ">
+          <a [routerLink]="['/detail',item.id]" style="text-decoration: none ; color: white" href="#">
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img class="img-fluid w-100" src="{{item.image}}" style="width: 100%; height: 100%"
+                       alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">Author: {{item.author}}</p>
+                    <p class="card-text">Price : {{item.price}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #070720">
+  <div class="container">
+    <a class="navbar-brand" href=""><b>Ani<span style="color:red;">me</span></b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/list">Manage List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart">Shopping Cart</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+<!--      <a routerLink="/cart" style="width: 4%; height: 4%;color: white"><img style="width: 80%; height: 80%" src="https://cdn-icons-png.flaticon.com/512/3655/3655468.png"></a>-->
+
+        <div [hidden]="isLoggedIn">
+          <div type="button" style="color:white" routerLink="../login"> Đăng Nhập</div>
+        </div>
+        <div [hidden]="!isLoggedIn">
+          <div style="color: white">Tài khoản : <span> {{username}}</span></div>
+          <div ><a style="color:white" href="" (click)="logOut()">Đăng xuất</a></div>
+        </div>
+    </div>
+  </div>
+</nav>
